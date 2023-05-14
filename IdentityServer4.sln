@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopApi", "ShopApi\ShopApi.csproj", "{D5E89A78-6AF0-46DD-985C-2D6CB3168135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{AD1BCDB5-ACD4-4301-AD8C-328A349A75E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5E89A78-6AF0-46DD-985C-2D6CB3168135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E89A78-6AF0-46DD-985C-2D6CB3168135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E89A78-6AF0-46DD-985C-2D6CB3168135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E89A78-6AF0-46DD-985C-2D6CB3168135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1BCDB5-ACD4-4301-AD8C-328A349A75E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1BCDB5-ACD4-4301-AD8C-328A349A75E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1BCDB5-ACD4-4301-AD8C-328A349A75E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1BCDB5-ACD4-4301-AD8C-328A349A75E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86E62613-F66F-4F72-BE3E-6F4E01393E9A}
+	EndGlobalSection
+EndGlobal
