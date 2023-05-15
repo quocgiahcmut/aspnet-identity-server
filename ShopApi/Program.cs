@@ -6,16 +6,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-var cs = builder.Configuration.GetConnectionString("DefaultConnectionString");
+builder.Services.AddAuthentication("Bearer")
+    .AddIdentityServerAuthentication("Bearer", options =>
+    {
+        options.Authority = "https://localhost:5443";
+        options.ApiName = "BookApi";
+    });
 
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
-    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
-
-//builder.Services.AddDataAccess(builder.Configuration);
+    option.UseSqlServer(builder.Configuration.GetConnectionString("PcConnection")));
 
 builder.Services.AddScoped<IBookService, BookService>();
 
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

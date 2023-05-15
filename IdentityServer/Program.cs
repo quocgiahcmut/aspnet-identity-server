@@ -12,7 +12,8 @@ if (seed)
 var builder = WebApplication.CreateBuilder(args);
 
 var assembly = typeof(Program).Assembly.GetName().Name;
-var defaultConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+var defaultConnection = builder.Configuration.GetConnectionString("PcConnection");
+//var defaultConnection = builder.Configuration.GetConnectionString("LaptopConnection");
 
 if (seed)
 {
@@ -39,6 +40,8 @@ builder.Services.AddIdentityServer()
         b.UseSqlServer(defaultConnection, opt => opt.MigrationsAssembly(assembly));
     })
     .AddDeveloperSigningCredential();
+
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
